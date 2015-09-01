@@ -2,25 +2,24 @@
 # include<string.h> // for strcpy
 # include<conio.h>
 
-class person{
+class person{ 
 char name[20];
 int yob; //Year of birth
 int yod; // Year of death
 public:
-person(){
-	strcpy(name,"N.A.");
+person(){strcpy(name,"N.A.");
 	yob=2000; yod=2000;
+	
+} 
+~person(){	delete []name;
 }
-~person(){
-	delete []name;
-}
-void getdata()
-{
+void getdata(){
 cout<<"
 
 Enter the name : ";
 cin.getline(name,19);
-cout<<"
+cout<<"     
+
 Enter the year of birth";
 cin>>yob;
 cout<<"
